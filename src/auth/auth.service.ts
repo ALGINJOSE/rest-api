@@ -1,10 +1,4 @@
-// import { Injectable } from '@nestjs/common';
-// import { NinjasService } from 'src/ninjas/ninjas.service';
+import { Injectable } from '@nestjs/common';
 
-// @Injectable()
-// export class AuthService {
-//     signIn(username: any, password: any) {
-//         throw new Error('Method not implemented.');
-//     }
-//     constructor (private ninjasService: NinjasService){}
-// }
+@Injectable()
+export class AuthService {}

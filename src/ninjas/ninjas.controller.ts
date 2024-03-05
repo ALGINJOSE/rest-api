@@ -4,8 +4,6 @@ import { UpdateNinjaDto } from './dto/update-ninjas.dto';
 import { NinjasService } from './ninjas.service';
 import { Ninjas } from './entities/ninjas.entity';
 
-// const service = new NinjasService();
-// const controller = new NinjasController(service);
 
 @Controller('ninjas')
 export class NinjasController {
@@ -18,9 +16,7 @@ export class NinjasController {
         try {
             return await this.ninjasService.getNinjas();
         } catch (error) {
-            // Handle error
-            // You can choose to log the error or return a custom response
-            throw error; // Rethrow the error to let NestJS handle it
+            throw error;
         }
     }
 
@@ -40,9 +36,7 @@ export class NinjasController {
         try {
             return await this.ninjasService.createNinjas(createNinjaDto);
         } catch (error) {
-            // Handle error
-            // You can choose to log the error or return a custom response
-            throw error; // Rethrow the error to let NestJS handle it
+            throw error;
         }
     }
 
@@ -51,9 +45,7 @@ export class NinjasController {
         try {
             return await this.ninjasService.updateNinjas(+id, updateNinjaDto);
         } catch (error) {
-            // Handle error
-            // You can choose to log the error or return a custom response
-            throw error; // Rethrow the error to let NestJS handle it
+            throw error;
         }
     }
 
@@ -62,9 +54,7 @@ export class NinjasController {
         try {
             return await this.ninjasService.removeNinjas(+id);
         } catch (error) {
-            // Handle error
-            // You can choose to log the error or return a custom response
-            throw error; // Rethrow the error to let NestJS handle it
+            throw error;
         }
     }
 }
