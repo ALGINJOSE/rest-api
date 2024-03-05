@@ -8,6 +8,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prestart": "mkdir -p /home/sbx_user1051/.npm/_logs || true",
     "start": "npx nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
