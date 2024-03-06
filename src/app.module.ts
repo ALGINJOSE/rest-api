@@ -8,10 +8,11 @@ import { User } from './users/entities/user.entity';
 import { Ninjas } from './ninjas/entities/ninjas.entity';
 import { NinjasController } from './ninjas/ninjas.controller';
 import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    
+    ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.POSTGRES_HOST,
