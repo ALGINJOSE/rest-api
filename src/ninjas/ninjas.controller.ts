@@ -23,9 +23,9 @@ export class NinjasController {
     @Get(':id')
     getoneNinja(@Param('id') id: string) {
         try{
-        return this.ninjasService.getNinja(+id)
+            return this.ninjasService.getNinja(+id)
     }   catch(err){
-        throw new NotFoundException()
+            throw new NotFoundException()
         }
         
     };
