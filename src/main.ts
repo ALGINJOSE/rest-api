@@ -1,12 +1,10 @@
-// api/index.ts
-
+require('dotenv').config({ path: `../.env` });
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.init();
-  return app.getHttpAdapter().getInstance();
+  await app.listen(process.env.PORT || 8000);
 }
-
+bootstrap()
 export default bootstrap;
